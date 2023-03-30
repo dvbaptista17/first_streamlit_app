@@ -62,6 +62,6 @@ if not add_fruit:
   streamlit.error("Please, write a fruit to add")
 else:
   my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"]) 
-  back_from_function=insert_row_snowflake(fruit_choice)
+  back_from_function=insert_row_snowflake(add_fruit)
   streamlit.write(back_from_function) 
 
